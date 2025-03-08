@@ -39,6 +39,9 @@ function renderizarTarefas() {
   for (let i = 0; i < tarefas.length; i++) {
    let novaTarefa = document.createElement("li");
    novaTarefa.textContent = tarefas[i];
+
+   let buttons = document.createElement("div");
+   buttons.className = "botoes";
    
    let botaoRemover = document.createElement("button");
    botaoRemover.className = "remover";
@@ -50,8 +53,9 @@ function renderizarTarefas() {
    botaoEditar.textContent = "Editar";
    botaoEditar.onclick =  ()  => editarTarefa(i);
 
-   novaTarefa.appendChild(botaoRemover);
-   novaTarefa.appendChild(botaoEditar);
+   buttons.appendChild(botaoRemover);
+   buttons.appendChild(botaoEditar);
+   novaTarefa.appendChild(buttons);
    listaTarefas.appendChild(novaTarefa);
   }
 }
