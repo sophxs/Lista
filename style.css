@@ -55,8 +55,8 @@ ul {
 
 ul li {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   background-color: #F4F0EA;
   color: #331F19;
   padding: 10px;
@@ -64,11 +64,6 @@ ul li {
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   font-size: 1.5em;
-}
-
-ul li button {
-  display: flex;
-  width: 100%;
 }
 
 /* Estilo para o campo de entrada */
@@ -92,15 +87,20 @@ input[type="text"]:focus {
   box-shadow: inset 0 2px 4px rgba(96, 4, 26, 0.3);
 }
 
+.botoes {
+ display: flex;
+ gap: 1rem;
+}
+
 button.remover {
+  margin: 0;
   background-color: #A34743;
   color: #F4F0EA;
-  padding: 5px 5px;
+  padding: 7px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 0.6em;
-  margin-left: 5px;
   transition: background-color 0.3s ease;
 }
 
@@ -109,14 +109,14 @@ button.remover:hover {
 }
 
 button.editar {
+  margin: 0;
   background-color: #331F19;
   color: #F4F0EA;
-  padding: 5px 5px;
+  padding: 7px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 0.6em;
-  margin-left: 5px;
   transition: background-color 0.3s ease;
 }
 
